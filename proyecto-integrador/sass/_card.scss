@@ -1,0 +1,123 @@
+.card{
+    padding: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    justify-content: center;
+    align-items: stretch;
+    &__container {
+        cursor: pointer;
+
+      
+        max-width: 15em;
+        height: 3em;
+        flex-grow: 1;
+        box-shadow:
+            1px 3px 5px rgba(0, 0, 0, 0.2),
+            0 0 8px orange(0, 0, 0, .05);
+        border-radius: 5px 5px 0  0;
+        transition: all .2s; 
+        border: 1px solid black;
+    }
+    &__article:hover {
+        transform: scale(1.1) rotate(.8deg);
+        transform-origin: bottom;
+        background-color:rgb(216, 127, 10);
+       
+        
+    }
+    &__card:nth-child(5n+1) {
+        background: linear-gradient(to bottom, hsl(0, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+    }
+    &__card:nth-child(5n+2) {
+        background: linear-gradient(to bottom, hsl(0, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+    }
+    &__card:nth-child(5n+3) {
+        background: linear-gradient(to bottom, hsl(50, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+    }
+    &__card:nth-child(5n+4) {
+        background: linear-gradient(to bottom, hsl(0, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+        background-color: #F6F2CF;
+    }
+    &__card:nth-child(5n+5) {
+        background: linear-gradient(to bottom, hsl(0, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+        background-color: #E3F3DB;
+    }
+    &__card:nth-child(5n+6) {
+        background: linear-gradient(to bottom, hsl(0, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+    }
+    &__card:nth-child(5n+7) {
+        background: linear-gradient(to bottom, hsl(0, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+    }
+    &__card:nth-child(5n+8) {
+        background: linear-gradient(to bottom, hsl(0, 87%, 34%) 0%, hsl(300, 30%, 40%) 100%);
+    }
+    &__card:nth-child(5n+9) {
+        background: linear-gradient(to bottom, hsl(198, 6%, 66%) 0%,hsl(200, 30%, 40%) 100%);
+        background-color: #F6F2CF;
+    }
+   
+    &__article{
+        padding: 5px;
+    }
+    &__imagecontainer {
+        background: #2585ac;
+        width: 220px;
+        height: 152px;
+        text-align: center;
+    }
+    &__image{
+       
+        width: 229px;
+        height: 152px;
+        object-fit: cover;
+        
+    }
+    &__content {
+        text-align: center;
+        
+        width: 229px;
+        height: 152px;
+        
+        
+    }
+    &__heading {
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+    &__description {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 300;
+
+    }
+    &__linkaddtocart{
+        font-family: 'Courier New', Courier, monospace;
+        text-decoration: none;
+        background-color: rgb(94, 203, 234);
+        height: 30px;
+        width: 30px;
+        
+
+    }
+
+    @media (min-width: 50px) {
+        .card__article { 
+            flex-direction: row;
+        }
+    
+        .card__image-container {
+            width: 10em;
+        }
+    }
+    
+    @media (min-width: 100px) {
+        .card__article { 
+            flex-direction: row-reverse ;
+        }
+    
+        .card__image-container {
+            width: 100%;
+        }
+    }
+}
+

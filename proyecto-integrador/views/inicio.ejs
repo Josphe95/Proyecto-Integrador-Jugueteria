@@ -1,0 +1,44 @@
+<%- include('template/head', {tituloWeb: 'Página de Inicio'}) %>
+
+<body>
+
+    <%- include('template/header') %>
+
+    <main class="main">
+
+        <section class="section-cards">
+            <header class="sectioncards">
+                <h1 class="sectioncards__h1 page__title">JUGUETERIA PREHISTORICA</h1>
+                <p class="sectioncards__p"><strong>LLEVA TU JUGUETE PREHISTORICO FAVORITO VERSION LIMITADA</strong></p>
+            </header>
+        
+            <div class="card">
+                <% cards.forEach(card => { %>
+                <div class="card__container">
+                    
+                      <article class="card__article">
+                        <div class="card__imagecontainer">
+                          <img class="card__image" src="<%= card.image %>" alt="">
+                        </div>
+                        <div class="card__content">
+                          <h2 class="card__heading"><%= card.title %></h2>
+                          <p class="card__description"><%= card.description %></p>
+                          <p>Precio <%= card.price %></p>
+                          <a class="card__linkaddtocart" href="/">Comprar</a>
+                          <div class="card__buttons-container">
+                            <form class="card__form" action="/<%= card.id %>?_method=PUT" method="POST"><button class="card__button-action">Actualizar</button>
+                            </form>
+                            <form class="card__form" action="/<%= card.id %>?_method=DELETE" method="POST">
+                            <button class="card__button-action">Eliminar</button>
+                            </form>
+                        </div>
+                        </div>
+                      </artile>
+                    
+                  </div>    
+           <% }) %>
+    </main>        
+      <%- include('template/footer') %>
+</body>
+</html>
+

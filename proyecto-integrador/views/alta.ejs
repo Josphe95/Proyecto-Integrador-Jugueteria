@@ -1,0 +1,42 @@
+<%- include('template/head', {tituloWeb: 'Página de Alta'}) %>
+
+
+<body>
+
+  <%- include('template/header') %>
+
+  <main class="main">
+
+    <h1 class="page__title">Página de alta, viene de EJS</h1>
+
+    <div class="form-container">
+        <form action="/alta" method="post" enctype="multipart/form-data" class="alta__form">
+            <div>
+              <label for="title">Título:</label>
+              <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+              <label for="description">Descripción:</label>
+              <textarea id="description" name="description" required></textarea>
+            </div>
+            <div>
+              <label for="price">Precio:</label>
+              <input type="number" id="price" name="price" required>
+            </div>
+            <div>
+              <label for="image">Imagen:</label>
+              <input type="file" id="image" name="image" required>
+            </div>
+            <button type="submit">Guardar</button>
+          </form>
+    </div>
+
+  </main>
+
+  <%- include('template/footer') %>
+
+  
+</body>
+</html>
+
+  
